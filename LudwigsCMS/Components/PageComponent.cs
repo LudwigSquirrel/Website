@@ -34,7 +34,7 @@ public class PageComponent
             case PageType.Normal:
                 return html($"""
                              <!DOCTYPE html>
-                             <html lang="en">
+                             <html lang="en" data-bs-theme="dark">
                              {Header.Render()}
                              <body>
                              {navigation.Render(this)}
@@ -48,7 +48,7 @@ public class PageComponent
             case PageType.GamesGallery:
                 return html($"""
                              <!DOCTYPE html>
-                             <html lang="en">
+                             <html lang="en" data-bs-theme="dark">
                              {Header.Render()}
                              <body>
                              {navigation.Render(this)}
