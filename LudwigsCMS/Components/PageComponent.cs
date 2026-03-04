@@ -22,6 +22,11 @@ public class PageComponent
 
     public PageType Type { get; set; } = PageType.Normal;
 
+    private static string Scripts => html("""
+                                          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                                          <script src="enable-tooltips.js" crossorigin="anonymous"></script>
+                                          """);
+
     public string Render(Navigation navigation)
     {
         string source = SiteContent.GetContentPath($"markdown/{MarkdownBodySource}.md");
@@ -38,8 +43,7 @@ public class PageComponent
                              <div class="container">
                              {Markdown.ToHtml(md, Program.CustomPipeline)}
                              </div>
-                             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-                             <script src="enable-tooltips.js" crossorigin="anonymous"></script>
+                             {Scripts}
                              </body>
                              </html>
                              """);
@@ -54,7 +58,7 @@ public class PageComponent
                              {Markdown.ToHtml(md, Program.CustomPipeline)}
                              {string.Join('\n', Games.Select(RenderGame))}
                              </div>
-                             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                             {Scripts}
                              </body>
                              </html>
                              """);
