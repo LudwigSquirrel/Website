@@ -1,0 +1,20 @@
+﻿namespace LudwigsCMS.Components;
+
+public class HeaderComponent
+{
+    public string Title { get; set; } = "Title";
+    public string[] Keywords { get; set; } = new[] { "Kevin Fischer", "Games" };
+
+    public string Render()
+    {
+        return html($"""
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="keywords" content="{string.Join(',', Keywords)}">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <title>{Title}</title>
+                  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                </head>
+                """);
+    }
+}

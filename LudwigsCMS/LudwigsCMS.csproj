@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="CommandLineParser" Version="2.9.1"/>
+        <PackageReference Include="Markdig" Version="1.1.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="input\**">
@@ -17,9 +18,15 @@
         <None Update="Content\html\**">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Update="Content\markdown\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Content\config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="input\index.json" />
+      <Compile Include=".AppSecrets\Secrets.cs" />
     </ItemGroup>
 
 </Project>

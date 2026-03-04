@@ -1,0 +1,67 @@
+﻿{
+  "Pages": [
+    {
+      "Header": {
+        "Title": "Home - My website :)",
+        "Keywords": [
+          "Kevin Fischer",
+          "Games"
+        ]
+      },
+      "MarkdownBodySource": "index",
+      "Games": [],
+      "Type": "normal"
+    },
+    {
+      "Header": {
+        "Title": "Résumé - Hire me before it's too late!",
+        "Keywords": [
+          "Kevin Fischer",
+          "Software Developer",
+          "Open for work",
+          "LinkedIn"
+        ]
+      },
+      "MarkdownBodySource": "resume",
+      "Games": [],
+      "Type": "normal"
+    },
+    {
+      "Header": {
+        "Title": "Eagle Eye - The coolest thing I made.",
+        "Keywords": [
+          "Zoom SDK",
+          "Unity"
+        ]
+      },
+      "MarkdownBodySource": "eagleeye",
+      "Games": [],
+      "Type": "normal"
+    },
+    {
+      "Header": {
+        "Title": "Games - Things to pass the time!",
+        "Keywords": [
+          "Kevin Fischer",
+          "Games"
+        ]
+      },
+      "MarkdownBodySource": "games",
+      "Games": [
+        {
+          "ItchioUrl": "https://phischermen.itch.io/ludwig",
+          "SteamUrl": "https://store.steampowered.com/app/4313060/Ludwig/",
+          "Name": "Ludwig!",
+          "Description": "My First Commercial Release!"
+        },
+        {
+          "ItchioUrl": "https://phischermen.itch.io/ludwig",
+          "SteamUrl": "https://store.steampowered.com/app/4313060/Ludwig/",
+          "Name": "Saku",
+          "Description": "My most popular game!"
+        }
+      ],
+      "Type": "gamesGallery"
+    }
+  ]
+}
