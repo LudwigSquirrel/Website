@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Text.Json.Serialization;
-using Markdig;
+﻿using System.Text.Json.Serialization;
 
 namespace LudwigsCMS.Components;
 
@@ -30,7 +28,7 @@ public class PageComponent
     public string Render(Navigation navigation)
     {
         string source = SiteContent.GetContentPath($"markdown/{MarkdownBodySource}.md");
-        string md = File.Exists(source) ? File.ReadAllText(source) : "# Oh No!\nNo content :(";
+        string content = File.Exists(source) ? File.ReadAllText(source) : "# Oh No!\nNo content :(";
         switch (Type)
         {
             case PageType.Normal:
@@ -41,7 +39,7 @@ public class PageComponent
                              <body>
                              {navigation.Render(this)}
                              <div class="container">
-                             {Markdown.ToHtml(md, Program.CustomPipeline)}
+                             {md(content)}
                              </div>
                              {Scripts}
                              </body>
@@ -55,7 +53,7 @@ public class PageComponent
                              <body>
                              {navigation.Render(this)}
                              <div class="container">
-                             {Markdown.ToHtml(md, Program.CustomPipeline)}
+                             {md(content)}
                              {string.Join('\n', Games.Select(RenderGame))}
                              </div>
                              {Scripts}

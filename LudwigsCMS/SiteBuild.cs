@@ -23,7 +23,7 @@ public static class SiteBuild
         {
             try
             {
-                SiteBuild.Build(page, navigation, Path.Join(OUTPUTPATH, page.HtmlOutputName));
+                SiteBuild.BuildPage(page, navigation, Path.Join(OUTPUTPATH, page.HtmlOutputName));
             }
             catch (Exception e)
             {
@@ -61,7 +61,7 @@ public static class SiteBuild
         Building = false;
     }
 
-    public static void Build(PageComponent page, Navigation navigation, string file)
+    public static void BuildPage(PageComponent page, Navigation navigation, string file)
     {
         File.WriteAllText(file, page.Render(navigation));
     }
