@@ -54,7 +54,9 @@ public class PageComponent
                              {navigation.Render(this)}
                              <div class="container">
                              {md(content)}
-                             {string.Join('\n', Games.Select(RenderGame))}
+                             <div class="gameGallery">
+                             {string.Join('\n', Games.Select(game => game.RenderGame()))}
+                             </div>
                              </div>
                              {Scripts}
                              </body>
@@ -65,16 +67,5 @@ public class PageComponent
         return "";
     }
 
-    public string RenderGame(GameComponent game)
-    {
-        return html($"""
-                     <div>
-                     <div class="gameThumb"></div><br>
-                     <span>{game.Name}</span><br>
-                     <span>{game.Description}</span>
-                     {(game.ItchioUrl != null ? $"<a href=\"{game.ItchioUrl}\"></a>" : "")}
-                     {(game.SteamUrl != null ? $"<a href=\"{game.SteamUrl}\"></a>" : "")}
-                     </div>
-                     """);
-    }
+    
 }

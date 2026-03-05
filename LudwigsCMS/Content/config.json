@@ -52,13 +52,22 @@
           "ItchioUrl": "https://phischermen.itch.io/ludwig",
           "SteamUrl": "https://store.steampowered.com/app/4313060/Ludwig/",
           "Name": "Ludwig!",
-          "Description": "My First Commercial Release!"
+          "Description": "My First Commercial Release!",
+          "ImageThumb": "ludwig-itch.png"
         },
         {
-          "ItchioUrl": "https://phischermen.itch.io/ludwig",
-          "SteamUrl": "https://store.steampowered.com/app/4313060/Ludwig/",
+          "ItchioUrl": "https://phischermen.itch.io/saku",
+          "SteamUrl": null,
           "Name": "Saku",
-          "Description": "My most popular game!"
+          "Description": "My most popular game!",
+          "ImageThumb": "saku-itch.gif"
+        },
+        {
+          "ItchioUrl": "https://phischermen.itch.io/saku",
+          "SteamUrl": null,
+          "Name": "1000 Rudolphs",
+          "Description": "A demented Christmas-themed FPS",
+          "ImageThumb": "1kRudolphs-itch.png"
         }
       ],
       "Type": "gamesGallery"

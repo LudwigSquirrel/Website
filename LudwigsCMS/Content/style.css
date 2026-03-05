@@ -1,1 +1,14 @@
-﻿
+﻿.gameThumb {
+    aspect-ratio: 13/10;
+    flex-basis: 49%;
+    background-position: 50% 0;
+}
+
+.gameGallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+}
