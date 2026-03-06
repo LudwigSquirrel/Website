@@ -1,6 +1,6 @@
-﻿# Résumé{.border-bottom}
+﻿[Résumé.pdf](Résumé.pdf)
 
-[Résumé.pdf](Résumé.pdf)
+# Résumé{.border-bottom}
 
 I have three years of professional experience doing web development. I've developed high-performing plugins and backend/
 frontend services, that integrated SDKs and cloud resources. I have a proven track record of troubleshooting and optimizing code 

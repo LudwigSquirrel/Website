@@ -1,7 +1,39 @@
-﻿.gameThumb {
+﻿:root, [data-bs-theme=dark]{
+    --bs-primary-rgb: rgba(13, 34, 43, 1)
+}
+
+body{
+    background: linear-gradient(10deg,rgba(0, 0, 0, 1) 0%, rgba(13, 34, 43, 1) 100%);
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: black 15px 5px;
+    margin-bottom: 1em;
+}
+
+.navbar {
+    background-color: rgba(23, 43, 54, 1);
+    border-bottom: 1px solid black;
+}
+
+.gameThumb {
     aspect-ratio: 13/10;
-    flex-basis: 49%;
     background-position: 50% 0;
+}
+
+.gameStoreLinkContainer {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.gameStoreLink {
+    flex-basis: 33%;
 }
 
 .gameGallery {
@@ -11,4 +43,8 @@
     justify-content: center;
     align-content: flex-start;
     gap: 10px;
+}
+
+.gameGalleryItem {
+    flex-basis: 49%;
 }
