@@ -5,6 +5,7 @@ namespace LudwigsCMS;
 public static class SiteBuild
 {
     public static bool Building { get; private set; }
+
     public static void BuildWebsite()
     {
         if (Building) return;
@@ -53,6 +54,16 @@ public static class SiteBuild
             var fileName = Path.GetFileName(file);
             File.Copy(
                 Path.Join(CONTENTPATH, $"js/{fileName}"),
+                Path.Join(OUTPUTPATH, fileName),
+                true);
+        }
+
+        // Copy misc.
+        foreach (var file in Directory.EnumerateFiles(Path.Join(CONTENTPATH, "misc")))
+        {
+            var fileName = Path.GetFileName(file);
+            File.Copy(
+                Path.Join(CONTENTPATH, $"misc/{fileName}"),
                 Path.Join(OUTPUTPATH, fileName),
                 true);
         }

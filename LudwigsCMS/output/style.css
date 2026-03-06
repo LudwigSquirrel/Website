@@ -22,7 +22,16 @@ h1 {
 
 .gameThumb {
     aspect-ratio: 13/10;
-    background-position: 50% 0;
+    width: 100%;
+}
+
+.gameDescription {
+    height: 4.6em;
+    max-height: 4.6em;
+    line-height: 1.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: rgba(23, 43, 54, 0.5);
 }
 
 .gameStoreLinkContainer {
@@ -34,6 +43,7 @@ h1 {
 
 .gameStoreLink {
     flex-basis: 33%;
+    background-color: rgba(23, 43, 54, 1);
 }
 
 .gameGallery {

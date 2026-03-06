@@ -14,29 +14,32 @@ public class GameComponent
         string steamButton = null;
         if (ItchioUrl != null)
         {
-            itchButton = html($"""
-                               <a href="{ItchioUrl}" type="button" class="btn m-2 btn-primary gameStoreLink" role="button">Itch.io</a>
-                               """);
+            itchButton = RenderGameStoreLink(ItchioUrl, "Itch.io");
         }
 
         if (SteamUrl != null)
         {
-            steamButton = html($"""
-                                <a href="{SteamUrl}" type="button" class="btn m-2 btn-primary gameStoreLink" role="button">Steam</a>
-                                """);
+            steamButton = RenderGameStoreLink(SteamUrl, "Steam");
         }
 
         return html($"""
                      <div class="gameGalleryItem">
-                     <span class="fs-1">{Name}</span><br>
-                     <div class="gameThumb p-2" style="background-image: url({ImageThumb})"></div>
-                     <span class="fs-6">{Description}</span>
+                     <img class="gameThumb" src="{ImageThumb}" alt="{Description}"></img>
+                     <h1 class="fw-bold border-bottom mb-3">{Name}</h1>
+                     <div class="m-2 fs-6 p-2 gameDescription">{Description}</div>
                      <div class="gameStoreLinkContainer">
                      {itchButton}
                      {steamButton}
                      </div>
                      </div>
                      
+                     """);
+    }
+    
+    public static string RenderGameStoreLink(string href, string text)
+    {
+        return html($"""
+                     <a href="{href}" type="button" class="btn m-2 rounded-0 gameStoreLink" role="button">{text}</a>
                      """);
     }
 }
